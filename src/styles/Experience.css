@@ -1,0 +1,453 @@
+/* =====================================
+   EXPERIENCE SECTION
+===================================== */
+
+.experience-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(59, 130, 246, 0.07),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 65%,
+      rgba(219, 39, 119, 0.06),
+      transparent 35%
+    ),
+    var(--bg);
+}
+
+.experience-container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =====================================
+   HEADING
+===================================== */
+
+.experience-heading {
+  max-width: 720px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.experience-eyebrow {
+  color: #3b82f6;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.experience-heading h2 {
+  margin-top: 18px;
+  color: var(--text);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.experience-heading h2 span {
+  background: linear-gradient(100deg, #60a5fa, #db2777);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.experience-heading > p {
+  max-width: 590px;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* =====================================
+   EXPERIENCE GRID & CARD
+===================================== */
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.experience-card {
+  position: relative;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  animation: experience-appear 0.7s ease both;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 25px 70px rgba(59, 130, 246, 0.12);
+}
+
+/* =====================================
+   CARD HEADER
+===================================== */
+
+.experience-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-company-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(219, 39, 119, 0.1)
+  );
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.experience-company-badge {
+  padding: 8px 14px;
+  border: 1px solid rgba(219, 39, 119, 0.3);
+  border-radius: 4px;
+  background: rgba(219, 39, 119, 0.08);
+  color: #db2777;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* =====================================
+   CARD CONTENT
+===================================== */
+
+.experience-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-type {
+  color: #60a5fa;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.experience-card-content h3 {
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.experience-role {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.experience-description {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.experience-section-divider {
+  height: 1px;
+  margin: 28px 0;
+  background: var(--border);
+}
+
+/* =====================================
+   RESPONSIBILITIES
+===================================== */
+
+.experience-subheading {
+  margin-top: 0;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.experience-tech-heading {
+  margin-top: 32px;
+}
+
+.experience-responsibilities {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.experience-check {
+  display: grid;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  place-items: center;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* =====================================
+   TECHNOLOGY TAGS
+===================================== */
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.experience-tag {
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.experience-tag:hover {
+  transform: translateY(-2px);
+  border-color: rgba(219, 39, 119, 0.45);
+  color: #db2777;
+}
+
+/* =====================================
+   BOTTOM STATEMENT
+===================================== */
+
+.experience-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  margin-top: 55px;
+  text-align: center;
+}
+
+.experience-bottom-icon {
+  color: #db2777;
+  font-size: 24px;
+  animation: experience-sparkle 3s ease-in-out infinite;
+}
+
+.experience-bottom p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes experience-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes experience-sparkle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+  .experience-section {
+    padding: 75px 0;
+  }
+
+  .experience-container {
+    width: calc(100% - 32px);
+  }
+
+  .experience-heading {
+    margin-bottom: 45px;
+  }
+
+  .experience-heading h2 {
+    font-size: clamp(32px, 8vw, 42px);
+  }
+
+  .experience-card {
+    padding: 28px;
+  }
+
+  .experience-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+
+  .experience-company-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  .experience-card-content h3 {
+    font-size: 24px;
+  }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+  .experience-section {
+    padding: 60px 0;
+  }
+
+  .experience-container {
+    width: calc(100% - 24px);
+  }
+
+  .experience-heading h2 {
+    font-size: 28px;
+    letter-spacing: -0.8px;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+
+  .experience-card-header {
+    gap: 15px;
+  }
+
+  .experience-company-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .experience-company-badge {
+    align-self: flex-start;
+  }
+
+  .experience-card-content h3 {
+    font-size: 22px;
+  }
+
+  .experience-role {
+    font-size: 13px;
+  }
+
+  .experience-description {
+    font-size: 12px;
+  }
+
+  .experience-subheading {
+    font-size: 13px;
+  }
+
+  .experience-responsibilities li {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .experience-check {
+    width: 20px;
+    height: 20px;
+  }
+
+  .experience-tag {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+
+  .experience-bottom {
+    margin-top: 40px;
+  }
+}
+
+/* =====================================
+   ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-section *,
+  .experience-section *::before,
+  .experience-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
